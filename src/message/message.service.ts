@@ -55,7 +55,6 @@ export class MessagesService {
                 sender: { id: user.userId },
                 receiver: { id: receiverId },
             });
-            console.log(saveMessage)
 
             const _receiver = await this.userService.findOneById(receiverId)
             const { sender, receiver, ...result } = saveMessage
